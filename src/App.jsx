@@ -30,8 +30,12 @@ export default function App() {
     try {
       setLoading(true);
 
+      const API_URL = import.meta.env.VITE_API_URL;
+
+
+
       const res = await axios.post(
-        "http://localhost:3000/analyze",
+        `${ API_URL }/analyze`,
         formData
       );
 
